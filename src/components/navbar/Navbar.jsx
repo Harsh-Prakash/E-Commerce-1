@@ -8,7 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useSelector } from "react-redux";
 
 export default function Navbar() {
-  const cartItems = useSelector((state) => state.cart)
+  const cartItems = useSelector((state) => state.cart);
   const [open, setOpen] = useState(false);
 
   const context = useContext(myContext);
@@ -16,11 +16,11 @@ export default function Navbar() {
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.clear("user");
-    navigate("/")
+    navigate("/");
   };
 
   return (
@@ -103,19 +103,26 @@ export default function Navbar() {
                     ""
                   )}
 
+                  <div className="flow-root">
                   {user ? (
-                    <div className="flow-root">
-                      <a
-                        onClick={logout}
-                        className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer"
-                        style={{ color: mode === "dark" ? "white" : "" }}
-                      >
-                        Logout
-                      </a>
-                    </div>
+                    <a
+                      onClick={logout}
+                      className="text-sm font-medium text-gray-700 cursor-pointer  "
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Logout
+                    </a>
                   ) : (
-                    ""
+                    <Link
+                      to={"/signup"}
+                      className="text-sm font-medium text-gray-700 cursor-pointer  "
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Signup
+                    </Link>
                   )}
+                  </div>
+
                   <div className="flow-root">
                     <Link
                       to={"/"}
@@ -223,13 +230,17 @@ export default function Navbar() {
                   >
                     All Products
                   </Link>
-                  {user?<Link
-                    to={"/order"}
-                    className="text-sm font-medium text-gray-700 "
-                    style={{ color: mode === "dark" ? "white" : "" }}
-                  >
-                    Order
-                  </Link>:""}
+                  {user ? (
+                    <Link
+                      to={"/order"}
+                      className="text-sm font-medium text-gray-700 "
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Order
+                    </Link>
+                  ) : (
+                    ""
+                  )}
                   {user?.user?.email === "arsh1012kolkata@gmail.com" ? (
                     <Link
                       to={"/dashboard"}
