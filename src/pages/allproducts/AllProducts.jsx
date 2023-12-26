@@ -5,6 +5,7 @@ import Layout from "../../components/layout/Layout";
 import myContext from "../../context/data/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import { useNavigate } from "react-router-dom";
 
 function Allproducts() {
   const context = useContext(myContext);
@@ -22,6 +23,8 @@ function Allproducts() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
   console.log(cartItems);
+
+  const navigate=useNavigate()
 
   const addCart = (product) => {
     dispatch(addToCart(product));
@@ -60,7 +63,7 @@ function Allproducts() {
                 return (
                   <div
                     onClick={() =>
-                      (window.location.href = `/productinfo/${id}`)
+                      navigate(`/productinfo/${id}`)
                     }
                     key={index}
                     className="p-4 md:w-1/4  drop-shadow-lg "
