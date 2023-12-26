@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   Navigate,
+  HashRouter,
 } from "react-router-dom";
 
 import Home from "./pages/home/Home";
@@ -24,7 +25,7 @@ import Allproducts from "./pages/allproducts/AllProducts";
 function App() {
   return (
     <MyState>
-      <Router>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -67,7 +68,7 @@ function App() {
           <Route path="/*" element={<NoPage />} />
         </Routes>
         <ToastContainer />
-      </Router>
+      </HashRouter>
     </MyState>
   );
 }
