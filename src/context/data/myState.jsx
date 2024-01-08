@@ -14,6 +14,7 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function MyState(props) {
   const [mode, setMode] = useState("light");
@@ -67,6 +68,7 @@ function MyState(props) {
       setLoading(false);
     }
   };
+  
 
   useEffect(() => {
     getProductData();
@@ -82,13 +84,16 @@ function MyState(props) {
     ) {
       return toast.error("Please fill all fields");
     }
+
+    const navigate=useNavigate()
+
     setLoading(true);
     try {
       const productRef = collection(fireDB, "products");
       await addDoc(productRef, products);
       toast.success("Product added Successfully");
       setTimeout(() => {
-        window.location.href = "/dashboard";
+        navigate("/dashboard");
       }, 1000);
       getProductData();
       closeModal();
@@ -97,6 +102,7 @@ function MyState(props) {
       console.log(error);
       setLoading(false);
     }
+    
   };
 
   // update product
@@ -110,7 +116,7 @@ function MyState(props) {
       await setDoc(doc(fireDB, "products", products.id), products);
       toast.success("Updated Successfully");
       setTimeout(() => {
-        window.location.href = "/dashboard";
+        navigate("/dashboard");
       }, 1000);
       getProductData();
       setLoading(false);
@@ -161,30 +167,30 @@ function MyState(props) {
   const [user, setUser] = useState([]);
 
   const getUserData = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const result = await getDocs(collection(fireDB, "users"))
+      const result = await getDocs(collection(fireDB, "users"));
       const usersArray = [];
       result.forEach((doc) => {
         usersArray.push(doc.data());
-        setLoading(false)
+        setLoading(false);
       });
       setUser(usersArray);
-      console.log(usersArray)
+      console.log(usersArray);
       setLoading(false);
     } catch (error) {
-      console.log(error)
-      setLoading(false)
+      console.log(error);
+      setLoading(false);
     }
-  }
+  };
 
   useEffect(() => {
     getUserData();
   }, []);
 
-  const [searchkey, setSearchkey] = useState('')
-  const [filterType, setFilterType] = useState('')
-  const [filterPrice, setFilterPrice] = useState('')
+  const [searchkey, setSearchkey] = useState("");
+  const [filterType, setFilterType] = useState("");
+  const [filterPrice, setFilterPrice] = useState("");
 
   return (
     <MyContext.Provider
@@ -201,8 +207,13 @@ function MyState(props) {
         deleteProduct,
         updateProduct,
         order,
-        user,searchkey, setSearchkey,filterType, setFilterType,
-        filterPrice, setFilterPrice
+        user,
+        searchkey,
+        setSearchkey,
+        filterType,
+        setFilterType,
+        filterPrice,
+        setFilterPrice,
       }}
     >
       {props.children}

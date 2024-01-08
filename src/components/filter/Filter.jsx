@@ -6,6 +6,10 @@ function Filter() {
   const { mode,searchkey, setSearchkey,filterType, setFilterType,
     filterPrice, setFilterPrice,product } = context;
 
+    const resetFilter=()=>{
+      setSearchkey("")
+    }
+
   return (
     <div>
       <div className=" container mx-auto px-4 mt-5 ">
@@ -43,7 +47,7 @@ function Filter() {
           </div>
           <div className="flex items-center justify-between mt-4">
             <p className="font-medium">Filters</p>
-            <button
+            <button onClick={resetFilter}
               className="px-4 py-2 bg-gray-50hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md"
               style={{ color: mode === "dark" ? "white" : "" }}
             >

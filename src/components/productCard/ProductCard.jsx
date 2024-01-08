@@ -43,8 +43,7 @@ function ProductCard() {
           </h1>
           <div class="h-1 w-20 bg-pink-600 rounded"></div>
         </div>
-
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap -m-4 w-full">
           {product
             .filter((obj) => obj.title.toLowerCase().includes(searchkey)).filter((obj)=>obj.category.toLowerCase().includes(filterType)).filter((obj) => obj.price.includes(filterPrice)).slice(0,8)
             .map((item, index) => {

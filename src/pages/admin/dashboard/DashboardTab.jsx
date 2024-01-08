@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import myContext from "../../../context/data/myContext";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
@@ -20,7 +20,11 @@ function DashboardTab() {
   }
   console.log(product);
 
-  const add = () => [(window.location.href = "/addproduct")];
+  const navigate=useNavigate()
+
+  const add = () =>{
+    navigate("/addproduct")
+  }
   return (
     <>
       <div className="container mx-auto">
