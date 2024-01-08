@@ -73,7 +73,7 @@ function MyState(props) {
   useEffect(() => {
     getProductData();
   }, []);
-
+  // const navigate=useNavigate()
   const addProduct = async () => {
     if (
       products.title == null ||
@@ -85,7 +85,7 @@ function MyState(props) {
       return toast.error("Please fill all fields");
     }
 
-    const navigate=useNavigate()
+    
 
     setLoading(true);
     try {
@@ -93,7 +93,7 @@ function MyState(props) {
       await addDoc(productRef, products);
       toast.success("Product added Successfully");
       setTimeout(() => {
-        navigate("/dashboard");
+        // navigate("/dashboard");
       }, 1000);
       getProductData();
       closeModal();
@@ -116,7 +116,7 @@ function MyState(props) {
       await setDoc(doc(fireDB, "products", products.id), products);
       toast.success("Updated Successfully");
       setTimeout(() => {
-        navigate("/dashboard");
+        // navigate("/dashboard");
       }, 1000);
       getProductData();
       setLoading(false);
