@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import myContext from "../../../context/data/myContext";
+import { Link } from "react-router-dom";
 
 function AddProduct() {
   const context=useContext(myContext)
@@ -65,9 +66,9 @@ function AddProduct() {
             ></textarea>
           </div>
           <div className=" flex justify-center mb-3">
-            <button onClick={addProduct} className=" bg-yellow-500 w-full text-black font-bold  px-2 py-2 rounded-lg">
+            <Link to="/dashboard" button onClick={addProduct} className=" bg-yellow-500 text-center w-full text-black font-bold  px-2 py-2 rounded-lg">
               Add Product
-            </button>
+            </Link>
           </div>
         </div>
       </div>
