@@ -26,7 +26,7 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://ecommerce-sk.vercel.app/img/kamal.png"/>
+                  src="./neelkalpa.png"/>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed">
@@ -55,7 +55,7 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://cdn-icons-png.flaticon.com/128/2763/2763444.png"
+                  src="souradipto.png"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
@@ -86,7 +86,7 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://webknudocs.vercel.app/logo/react.png"
+                  src="mayukh.png"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
