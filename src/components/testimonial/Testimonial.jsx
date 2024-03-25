@@ -10,7 +10,8 @@ function Testimonial() {
         <div className="container px-5 py-10 mx-auto">
           <h1
             className=" text-center text-3xl font-bold text-black"
-            style={{ color: mode === "dark" ? "white" : "" }}>
+            style={{ color: mode === "dark" ? "white" : "" }}
+          >
             Customer Reviews
           </h1>
           <h2
@@ -26,21 +27,23 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="./neelkalpa.png"/>
+                  src="./neelkalpa.png"
+                />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
-                  className="leading-relaxed">
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  className="leading-relaxed"
+                >
+                  Harsh Stores provides exceptional service and fast delivery.
+                  My laptop and curtains arrived quickly and were exactly as
+                  described. The website is user-friendly, and their attention
+                  to customer satisfaction is commendable. Highly recommended!
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  Kamal Nayan Upadhyay
+                  Neelkalpa Majumder
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
@@ -61,17 +64,18 @@ function Testimonial() {
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  I love the variety and quality of products at Harsh Stores.
+                  From kitchen appliances to decorative items, they have it all.
+                  I recently bought a vacuum cleaner and throw pillows - both
+                  exceeded my expectations. Competitive prices make it even
+                  better!
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  React Js
+                  Souradipto Saha
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
@@ -92,17 +96,18 @@ function Testimonial() {
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  Harsh Stores offers an impressive range of electronics and
+                  home decor. I recently purchased a smart speaker and some wall
+                  art - both arrived promptly and in perfect condition. Their
+                  customer service team was also incredibly helpful. Highly
+                  recommended!
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  React Js
+                  Mayukh Haldar
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}

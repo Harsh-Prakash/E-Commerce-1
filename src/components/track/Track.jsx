@@ -36,10 +36,10 @@ function Track() {
                   className="title-font font-medium text-lg text-gray-900"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  Premium Tshirts
+                  Premium Products
                 </h2>
                 <p className="leading-relaxed">
-                  Our T-Shirts are 100% made of cotton.
+                  Our Products are 100% genuine and tested.
                 </p>
               </div>
             </div>
